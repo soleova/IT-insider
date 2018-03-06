@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Dancing+Script|Quicksand">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  
     
     <style>
@@ -42,9 +43,11 @@
         
         .survey .second-col {
             font-family: 'Quicksand', sans-serif;
-            color:#33b5e5;
+            color:#212121;
             padding: 0 50px 0 50px;
             text-align: center;
+            text-shadow: #000 0px 0px 1px;
+            -webkit-font-smoothing: antialiased;
         }
         
         .survey .third-col {
@@ -183,6 +186,24 @@
               var naziv = pozicije[i].substr(razmak + 1); 
               
               $("#pozicije").append("<option value='"+sifra+"'>"+naziv+"</option>"); 
+            }
+          },
+            
+          error: function(){
+            window.alert("Problem - probajte sa koriscenjem aplikacije kasnije!"); 
+          }
+        });
+          
+        $.ajax({
+          url: 'companies.php',  
+          method: 'GET', 
+          data: {}, 
+          success: function(rezultat){
+            var kompanije_u_bazi = rezultat.split("::");
+            for(var i = 0; i < kompanije_u_bazi.length-1; i++){
+              var naziv = kompanije_u_bazi[i]; 
+                
+             $("#companies").append("<option value ='"+naziv+"'>"+naziv+"</option>");
             }
           },
             
@@ -419,6 +440,7 @@
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
                   <input type="text" name="company" list="companies" class ="form-control form-control-lg" placeholder = "Unesi ime firme..">
                     <datalist id="companies">
+                        <select option = ""> </select>
                     </datalist>
                 </div>
                 <div class="col-12 col-md-3 mb-5">
