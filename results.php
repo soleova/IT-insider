@@ -4,7 +4,7 @@
         <meta name = "viewport" content = "width=device-width, initial-scale = 1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Quicksand">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Dancing+Script|Quicksand">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -51,7 +51,14 @@
             .header-comment{
                 padding: 0px 0px 20px 0px;
             }
-       
+            
+            .navbar-brand {
+            font-family: 'Alfa Slab One', serif;
+            color: #212121;
+            text-shadow: #000 0px 0px 1px;
+            -webkit-font-smoothing: antialiased;
+            }
+        
 	        .table-hover thead tr:hover th, .table-hover tbody tr:hover td {
                 background-color: silver;
             }

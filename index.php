@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title> Anketa o poslovima </title>
+    <title> IT INSIDER </title>
     <meta charset="utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale = 1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
             margin: 0; 
             height: 100%; 
         }
-       
+        
         .bg-1 {
             background-color: #343a40;
             background: url("img/center-bg.jpeg") no-repeat center center;
@@ -33,6 +33,13 @@
             text-shadow: #000 0px 0px 1px;
             -webkit-font-smoothing: antialiased;
 	    }
+        
+        .navbar-brand {
+            font-family: 'Alfa Slab One', serif;
+            color: #212121;
+            text-shadow: #000 0px 0px 1px;
+            -webkit-font-smoothing: antialiased;
+        }
         
         .survey{
             font-size: 13px;
@@ -435,16 +442,16 @@
             <h2 class="mb-4">Zelis da saznas nesto vise?</h2>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
+            <form action = "display_statistics.php" method = "GET" id = "f-2">
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="text" name="company" list="companies" class ="form-control form-control-lg" placeholder = "Unesi ime firme..">
+                  <input type="text" name="pretrazi-firme" list="companies" class ="form-control form-control-lg" placeholder = "Unesi ime firme..">
                     <datalist id="companies">
                         <select option = ""> </select>
                     </datalist>
                 </div>
                 <div class="col-12 col-md-3 mb-5">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Pretrazi</button>
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">pretrazi</button>
                 </div>
               </div>
             </form>
